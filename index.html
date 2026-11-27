@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>प्रज्ञा भूमि प्राकृतिक फार्म | ऑनलाइन स्टोर एवं बहीखाता</title>
+  <meta name="theme-color" content="#14532d" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link id="favIcon" rel="icon" type="image/png" />
+  <link id="appleIcon" rel="apple-touch-icon" />
+  <link id="pwaManifest" rel="manifest" />
+  <script>
+    (function() {
+      const c = document.createElement('canvas');
+      c.width = 512; c.height = 512;
+      const ctx = c.getContext('2d');
+      ctx.fillStyle = '#14532d';
+      ctx.beginPath();
+      ctx.roundRect(0, 0, 512, 512, 96);
+      ctx.fill();
+      ctx.font = '300px serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('🌱', 256, 272);
+      const pngUrl = c.toDataURL('image/png');
+      document.getElementById('favIcon').href = pngUrl;
+      document.getElementById('appleIcon').href = pngUrl;
+
+      const manifestObj = {
+        name: "प्रज्ञा भूमि प्राकृतिक फार्म",
+        short_name: "Pragya Bhoomi",
+        start_url: location.href,
+        display: "standalone",
+        background_color: "#14532d",
+        theme_color: "#14532d",
+        icons: [
+          { src: pngUrl, sizes: "192x192", type: "image/png", purpose: "any maskable" },
+          { src: pngUrl, sizes: "512x512", type: "image/png", purpose: "any maskable" }
+        ]
+      };
+      const blob = new Blob([JSON.stringify(manifestObj)], { type: 'application/manifest+json' });
+      document.getElementById('pwaManifest').href = URL.createObjectURL(blob);
+    })();
+  </script>
+  <style>
+    :root {
+      --primary: #14532d;
+      --accent: #facc15;
+      --bg: #f3f5f7;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      height: auto !important;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding-bottom: 100px;
+    }
+    .store-header {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 16px 18px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      box-shadow: 0 4px 12px rgba(20, 83, 45, 0.18);
+    }
+    .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 6px; flex-wrap: wrap; }
+    .store-badge { background: rgba(255,255,255,0.16); font-size: 11px; padding: 4px 10px; border-radius: 20px; display: inline-flex; align-items: center; gap: 5px; }
+    .dot-live { width: 7px; height: 7px; background: #4ade80; border-radius: 50%; display: inline-block; }
+    .header-actions { display: flex; gap: 6px; align-items: center; }
+    .install-top-btn { background: var(--accent); color: var(--primary); border: none; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 800; cursor: pointer; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+    .share-store-btn { background: rgba(255,255,255,0.2); color: #fff; border: none; padding: 6px 11px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; }
+    .store-info { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .store-logo { width: 52px; height: 52px; background: #dcfce7; color: var(--primary); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; }
+    .store-title h1 { font-size: 19px; font-weight: 800; line-height: 1.25; }
+    .store-title p { font-size: 12px; color: #bbf7d0; margin-top: 3px; }
+    .search-wrap { position: relative; }
+    .search-input { width: 100%; padding: 11px 14px 11px 38px; border-radius: 12px; border: none; font-size: 14px; background: #fff; color: var(--text); }
+    .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 15px; color: var(--muted); }
+
+    /* Install App Banner Card */
+    .install-banner {
+      background: linear-gradient(135deg, #166534, #14532d);
+      color: #fff;
+      margin: 12px 14px 4px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 3px 10px rgba(20, 83, 45, 0.16);
+    }
+    .install-banner-left { display: flex; align-items: center; gap: 10px; }
+    .install-banner-icon { width: 38px; height: 38px; background: #dcfce7; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .install-banner-text strong { display: block; font-size: 13px; }
+    .install-banner-text span { font-size: 11px; color: #bbf7d0; }
+    .install-banner-btn { background: var(--accent); color: var(--primary); border: none; padding: 8px 14px; border-radius: 10px; font-weight: 800; font-size: 12px; white-space: nowrap; cursor: pointer; }
+
+    /* Modals */
+    .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.58); z-index: 90; align-items: center; justify-content: center; padding: 16px; }
+    .modal-card { background: #fff; border-radius: 18px; padding: 18px; max-width: 370px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.28); }
+    .modal-card h3 { color: var(--primary); font-size: 16px; margin-bottom: 10px; }
+    .modal-step { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px; padding: 9px 11px; font-size: 13px; margin-bottom: 8px; line-height: 1.45; }
+    .modal-close-btn { width: 100%; background: var(--primary); color: #fff; border: none; padding: 11px; border-radius: 10px; font-weight: 700; font-size: 14px; margin-top: 6px; cursor: pointer; }
+
+    /* My Dukaan Style Digital Visiting Card */
+    .dukaan-card-preview {
+      background: linear-gradient(145deg, #14532d 0%, #166534 55%, #0f3d21 100%);
+      color: #fff;
+      border-radius: 16px;
+      padding: 18px 14px;
+      text-align: center;
+      border: 2px solid #facc15;
+      box-shadow: 0 8px 20px rgba(20, 83, 45, 0.25);
+      margin-bottom: 12px;
+    }
+    .dcp-badge { display: inline-block; background: #facc15; color: #14532d; font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 20px; margin-bottom: 8px; }
+    .dcp-logo { width: 54px; height: 54px; background: #dcfce7; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 30px; margin: 0 auto 8px; }
+    .dcp-title { font-size: 18px; font-weight: 800; margin-bottom: 3px; }
+    .dcp-sub { font-size: 12px; color: #bbf7d0; margin-bottom: 10px; }
+    .dcp-tags { display: flex; justify-content: center; gap: 5px; flex-wrap: wrap; margin-bottom: 10px; }
+    .dcp-tags span { background: rgba(255,255,255,0.14); font-size: 10px; padding: 3px 8px; border-radius: 12px; }
+    .dcp-link-box { background: #fff; color: #14532d; font-size: 11px; font-weight: 800; padding: 6px 10px; border-radius: 8px; word-break: break-all; }
+    .share-actions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+    .btn-wa-card { background: #16a34a; color: #fff; border: none; padding: 11px 8px; border-radius: 10px; font-weight: 800; font-size: 12px; cursor: pointer; }
+    .btn-dl-card { background: #fef08a; color: #713f12; border: 1px solid #facc15; padding: 11px 8px; border-radius: 10px; font-weight: 800; font-size: 12px; cursor: pointer; }
+
+    .offer-strip { background: linear-gradient(90deg, #fef08a, #fde047); color: #713f12; margin: 10px 14px 6px; padding: 10px 14px; border-radius: 12px; font-size: 13px; font-weight: 700; border: 1px solid #facc15; }
+    .delivery-pill-bar { background: #dcfce7; color: #14532d; margin: 6px 14px 4px; padding: 8px 12px; border-radius: 10px; font-size: 12px; font-weight: 700; border: 1px solid #86efac; }
+    .cat-bar { position: sticky; top: 0; z-index: 40; background: var(--bg); padding: 10px 14px; display: flex; gap: 8px; overflow-x: auto; border-bottom: 1px solid var(--border); }
+    .cat-pill { background: #fff; border: 1px solid var(--border); padding: 7px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; color: #374151; white-space: nowrap; cursor: pointer; }
+    .cat-pill.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .section-head { padding: 10px 14px 6px; display: flex; justify-content: space-between; align-items: center; }
+    .section-head h2 { font-size: 15px; font-weight: 700; color: #1f2937; }
+    .item-count { font-size: 12px; color: var(--muted); }
+    .product-list { padding: 4px 14px; display: flex; flex-direction: column; gap: 10px; }
+    .p-card { background: var(--card); border-radius: 14px; padding: 12px; border: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
+    .p-thumb { width: 76px; height: 76px; background: #f0fdf4; border: 1px solid #dcfce7; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; position: relative; overflow: hidden; }
+    .p-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .discount-tag { position: absolute; top: 0; left: 0; background: #dc2626; color: #fff; font-size: 9px; font-weight: 800; padding: 2px 5px; border-bottom-right-radius: 6px; z-index: 2; }
+    .p-details { flex: 1; min-width: 0; }
+    .badges-row { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+    .p-tag { font-size: 10px; font-weight: 700; color: #15803d; background: #dcfce7; padding: 2px 6px; border-radius: 4px; }
+    .p-tag-nonorg { font-size: 10px; font-weight: 700; color: #92400e; background: #fef3c7; padding: 2px 6px; border-radius: 4px; }
+    .p-cat-badge { font-size: 10px; font-weight: 600; color: #1e40af; background: #dbeafe; padding: 2px 6px; border-radius: 4px; }
+    .p-stock-badge { font-size: 10px; font-weight: 600; color: #374151; background: #f3f4f6; padding: 2px 6px; border-radius: 4px; }
+    .p-name { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+    .p-unit { font-size: 12px; color: var(--muted); margin-bottom: 5px; }
+    .p-price-row { display: flex; align-items: baseline; gap: 6px; }
+    .p-price { font-size: 16px; font-weight: 800; }
+    .p-mrp { font-size: 12px; color: #9ca3af; text-decoration: line-through; }
+    .add-btn { background: #f0fdf4; color: var(--primary); border: 1.5px solid var(--primary); padding: 7px 16px; border-radius: 9px; font-weight: 800; font-size: 13px; cursor: pointer; }
+    .out-btn { background: #f3f4f6; color: #9ca3af; border: 1px solid #d1d5db; padding: 7px 12px; border-radius: 9px; font-weight: 700; font-size: 11px; }
+    .stepper { display: flex; align-items: center; background: var(--primary); color: #fff; border-radius: 9px; overflow: hidden; }
+    .stepper button { background: none; border: none; color: #fff; width: 28px; height: 32px; font-size: 17px; font-weight: 700; cursor: pointer; }
+    .stepper span { padding: 0 8px; font-size: 14px; font-weight: 700; }
+    .checkout-card { background: #fff; margin: 18px 14px; padding: 16px; border-radius: 16px; border: 1px solid var(--border); }
+    .checkout-card h3 { font-size: 16px; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
+    .bill-box { background: #f8fafc; border: 1px dashed #cbd5e1; padding: 12px; border-radius: 12px; font-size: 13px; line-height: 1.8; margin-bottom: 14px; }
+    .coupon-row { display: flex; gap: 8px; margin-bottom: 14px; }
+    .coupon-row input { flex: 1; padding: 9px 12px; border: 1px solid #cbd5e1; border-radius: 10px; font-size: 13px; text-transform: uppercase; }
+    .coupon-row button { background: var(--primary); color: #fff; border: none; padding: 0 14px; border-radius: 10px; font-weight: 700; font-size: 13px; cursor: pointer; }
+    .field { margin-bottom: 11px; }
+    .field label { display: block; font-size: 12px; font-weight: 700; margin-bottom: 4px; color: #374151; }
+    .field input, .field select, .field textarea { width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 14px; background: #fff; }
+    .qr-panel { display: none; text-align: center; background: #f0fdf4; border: 1.5px solid #86efac; padding: 14px; border-radius: 12px; margin-bottom: 12px; }
+    .qr-panel img { width: 175px; height: 175px; margin: 8px auto; display: block; border-radius: 8px; background: #fff; padding: 6px; }
+    .order-wa-btn { width: 100%; background: #16a34a; color: #fff; border: none; padding: 14px; border-radius: 12px; font-size: 15px; font-weight: 800; cursor: pointer; }
+    .floating-cart { position: fixed; bottom: 12px; left: 14px; right: 14px; background: var(--primary); color: #fff; padding: 12px 16px; border-radius: 14px; display: none; justify-content: space-between; align-items: center; z-index: 60; box-shadow: 0 6px 20px rgba(0,0,0,0.25); cursor: pointer; }
+    .fc-left { font-size: 13px; }
+    .fc-left strong { font-size: 16px; display: block; }
+    .fc-right { background: var(--accent); color: var(--primary); padding: 7px 14px; border-radius: 10px; font-weight: 800; font-size: 13px; }
+    footer { text-align: center; padding: 16px; font-size: 12px; color: var(--muted); }
+    .footer-btns { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .install-foot-btn { background: var(--primary); color: #fff; border: none; padding: 9px 14px; border-radius: 10px; font-size: 12px; font-weight: 700; cursor: pointer; }
+    .admin-open-btn { background: #fff; border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 10px; font-size: 12px; font-weight: 700; color: #374151; cursor: pointer; }
+
+    /* Admin Panel */
+    #adminBox { display: none; background: #fff; margin: 14px; padding: 14px; border-radius: 16px; border: 2px solid var(--primary); }
+    .adm-tabs { display: flex; gap: 6px; overflow-x: auto; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 1px solid #e5e7eb; }
+    .adm-tab { background: #f3f4f6; border: none; padding: 8px 12px; border-radius: 8px; font-size: 12px; font-weight: 700; color: #374151; white-space: nowrap; cursor: pointer; }
+    .adm-tab.active { background: var(--primary); color: #fff; }
+    .adm-pane { display: none; }
+    .adm-pane.active { display: block; }
+    .admin-subcard { background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px; border-radius: 12px; margin-bottom: 12px; }
+    .admin-subcard h4 { font-size: 14px; color: var(--primary); margin-bottom: 10px; }
+    .admin-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .admin-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+    .stat-box { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px; text-align: center; }
+    .stat-box small { font-size: 10px; color: #6b7280; display: block; }
+    .stat-box strong { font-size: 15px; color: #14532d; }
+    .btn-sm-primary { width: 100%; background: var(--primary); color: #fff; border: none; padding: 11px; border-radius: 10px; font-weight: 700; font-size: 13px; cursor: pointer; margin-top: 8px; }
+    .btn-sm-outline { width: 100%; background: #fff; color: var(--primary); border: 1.5px solid var(--primary); padding: 10px; border-radius: 10px; font-weight: 700; font-size: 13px; cursor: pointer; margin-top: 8px; }
+    .admin-item-row { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; margin-bottom: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+    .admin-item-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-weight: 700; font-size: 13px; }
+    .del-btn { background: #fee2e2; color: #dc2626; border: none; padding: 5px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; }
+    .photo-btn { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; padding: 5px 9px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; display: inline-block; }
+    .clear-photo-btn { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; padding: 5px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; }
+    .adm-input { width: 100%; padding: 8px 9px; border: 1.5px solid #cbd5e1; border-radius: 8px; font-size: 13px; background: #fff; color: #111827; -webkit-user-select: text; user-select: text; }
+    .adm-input:focus { border-color: var(--primary); outline: none; background: #f0fdf4; }
+    .adm-lbl { font-size: 11px; color: #374151; font-weight: 700; display: block; margin-bottom: 3px; }
+    .adm-preview-box { width: 48px; height: 48px; border-radius: 8px; background: #f0fdf4; border: 1px solid #bbf7d0; display: flex; align-items: center; justify-content: center; font-size: 26px; overflow: hidden; flex-shrink: 0; }
+    .adm-preview-box img { width: 100%; height: 100%; object-fit: cover; }
+    .status-badge-pending { background: #fef3c7; color: #92400e; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; }
+    .status-badge-delivered { background: #dcfce7; color: #166534; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; }
+    .deliver-btn { background: #16a34a; color: #fff; border: none; padding: 5px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; }
+    .cat-chip-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .cat-chip { background: #fff; border: 1px solid #cbd5e1; padding: 4px 10px; border-radius: 16px; font-size: 11px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+  </style>
+</head>
+<body>
+
+  <header class="store-header">
+    <div class="header-top">
+      <span class="store-badge"><span class="dot-live"></span> मेरु (BSF), हजारीबाग</span>
+      <div class="header-actions">
+        <button class="install-top-btn" id="installTopBtn" onclick="triggerAppInstall()">📲 ऐप इंस्टॉल करें</button>
+        <button class="share-store-btn" onclick="shareStore()">🪪 दुकान कार्ड शेयर करें</button>
+      </div>
+    </div>
+    <div class="store-info">
+      <div class="store-logo">🌱</div>
+      <div class="store-title">
+        <h1>प्रज्ञा भूमि प्राकृतिक फार्म</h1>
+        <p>ताज़ी देशी सब्जियां, साग, मसाला, अचार व अनाज</p>
+      </div>
+    </div>
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="साग, सब्जी, सलाद, मसाला, अचार या चावल खोजें..." oninput="renderProducts()" />
+    </div>
+  </header>
+
+  <!-- Direct Install Banner -->
+  <div class="install-banner" id="installBannerBox">
+    <div class="install-banner-left">
+      <div class="install-banner-icon">🌱</div>
+      <div class="install-banner-text">
+        <strong>प्रज्ञा भूमि ऐप अपने फोन में जोड़ें</strong>
+        <span>सीधे खेत से ताज़ी उपज 1-क्लिक में मंगाएं</span>
+      </div>
+    </div>
+    <button class="install-banner-btn" onclick="triggerAppInstall()">📲 ऐप इंस्टॉल करें</button>
+  </div>
+
+  <!-- Install Guide Modal -->
+  <div class="modal-backdrop" id="installGuideModal" onclick="if(event.target===this)this.style.display='none'">
+    <div class="modal-card">
+      <h3>📲 अपने फोन में ऐप जोड़ने का तरीका</h3>
+      <div class="modal-step">1️⃣ ऊपर दाईं ओर बने <b>तीन डॉट्स (⋮)</b> पर टैप करें।</div>
+      <div class="modal-step">2️⃣ मेनू में <b>"Add to Home screen"</b> या <b>"Install app"</b> चुनें।</div>
+      <div class="modal-step">3️⃣ <b>Add / Install</b> पर दबाएं — आपके फोन की स्क्रीन पर हरे पौधे (🌱) वाला ऐप आ जाएगा!</div>
+      <button class="modal-close-btn" onclick="document.getElementById('installGuideModal').style.display='none'">ठीक है, समझ गया</button>
+    </div>
+  </div>
+
+  <!-- My Dukaan Style Digital Store Share Card Modal -->
+  <div class="modal-backdrop" id="shareCardModal" onclick="if(event.target===this)this.style.display='none'">
+    <div class="modal-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+        <h3 style="margin:0;">🪪 आपकी डिजिटल दुकान कार्ड</h3>
+        <button type="button" onclick="document.getElementById('shareCardModal').style.display='none'" style="border:none;background:#f3f4f6;width:28px;height:28px;border-radius:50%;font-weight:800;cursor:pointer;">✕</button>
+      </div>
+      <div class="dukaan-card-preview">
+        <span class="dcp-badge">🌿 100% प्राकृतिक एवं रसायन-मुक्त</span>
+        <div class="dcp-logo">🌱</div>
+        <div class="dcp-title">प्रज्ञा भूमि प्राकृतिक फार्म</div>
+        <div class="dcp-sub">📍 मेरु (BSF), हजारीबाग • 📞 +91 8210481088</div>
+        <div class="dcp-tags">
+          <span>🌿 ताज़ा साग</span>
+          <span>🥬 देशी सब्जी</span>
+          <span>🌶️ शुद्ध मसाला</span>
+          <span>🫙 अचार</span>
+          <span>🌾 चावल</span>
+        </div>
+        <div class="dcp-link-box">🔗 https://pragyafarm.netlify.app</div>
+      </div>
+      <div class="share-actions-grid">
+        <button type="button" class="btn-wa-card" onclick="shareCardOnWhatsApp()">📲 कार्ड + लिंक शेयर करें</button>
+        <button type="button" class="btn-dl-card" onclick="downloadVisitingCard()">🖼️ कार्ड फोटो सेव करें</button>
+      </div>
+      <button type="button" class="modal-close-btn" style="background:#f3f4f6;color:#374151;font-size:12px;padding:9px;" onclick="copyStoreLink()">📋 स्टोर लिंक कॉपी करें</button>
+    </div>
+  </div>
+
+  <div class="offer-strip" id="offerBanner">
+    🎁 आज का ऑफर: ताज़ी देशी उपज सीधे खेत से | कूपन कोड: PRAGYA10 (10% छूट)
+  </div>
+
+  <div class="delivery-pill-bar" id="deliveryRuleBanner">
+    🚚 होम डिलीवरी: ₹300 से अधिक के ऑर्डर पर बिल्कुल फ्री (अन्यथा ₹30)
+  </div>
+
+  <div class="cat-bar" id="catBar"></div>
+
+  <div class="section-head">
+    <h2 id="catHeading">सभी उपलब्ध उत्पाद</h2>
+    <span class="item-count" id="itemCountText">10 आइटम</span>
+  </div>
+
+  <div class="product-list" id="productList"></div>
+
+  <section class="checkout-card" id="checkoutSection">
+    <h3>🧾 ऑर्डर व बिल विवरण</h3>
+    <div class="bill-box" id="billSummary">आपकी टोकरी खाली है। ऊपर से उत्पाद जोड़ें।</div>
+
+    <div class="coupon-row">
+      <input type="text" id="couponInput" placeholder="कूपन कोड (जैसे PRAGYA10)" />
+      <button onclick="applyCoupon()">लागू करें</button>
+    </div>
+
+    <div class="field">
+      <label>ग्राहक का नाम *</label>
+      <input type="text" id="custName" placeholder="अपना पूरा नाम लिखें" />
+    </div>
+    <div class="field">
+      <label>मोबाइल नंबर *</label>
+      <input type="tel" id="custPhone" placeholder="10 अंकों का मोबाइल नंबर" />
+    </div>
+    <div class="field">
+      <label>डिलीवरी विकल्प चुनें *</label>
+      <select id="deliveryType" onchange="updateBill()">
+        <option value="home">🚚 होम डिलीवरी (घर पर मंगाएं)</option>
+        <option value="pickup">🏪 स्वयं फार्म / बाजार बस स्टैंड से लेंगे (फ्री)</option>
+      </select>
+    </div>
+    <div class="field">
+      <label>पूरा पता व क्षेत्र *</label>
+      <textarea id="custAddress" rows="2" placeholder="मकान नंबर, मोहल्ला / कॉलोनी (जैसे: मेरु BSF, दीपूगढ़ा, हजारीबाग)"></textarea>
+    </div>
+    <div class="field">
+      <label>पेमेंट का तरीका</label>
+      <select id="paymentMode" onchange="updateBill()">
+        <option value="COD">Cash on Delivery (डिलीवरी पर नकद)</option>
+        <option value="UPI">UPI QR से ऑनलाइन पेमेंट</option>
+      </select>
+    </div>
+
+    <div class="qr-panel" id="qrPanel">
+      <strong>UPI से ₹<span id="qrAmount">0</span> पेमेंट करें</strong>
+      <img id="qrImg" src="" alt="UPI QR" />
+      <p style="font-size:12px;color:#166534;">UPI ID: Info.pavhzb-2@oksbi</p>
+    </div>
+
+    <button class="order-wa-btn" onclick="placeWhatsAppOrder()">✅ WhatsApp पर ऑर्डर भेजें</button>
+  </section>
+
+  <footer>
+    <p>© 2026 प्रज्ञा भूमि प्राकृतिक फार्म • मेरु (BSF), हजारीबाग</p>
+    <p style="margin-top:4px;">संपर्क: +91 8210481088</p>
+    <div class="footer-btns">
+      <button class="install-foot-btn" id="installFootBtn" onclick="triggerAppInstall()">📲 ऐप इंस्टॉल करें</button>
+      <button class="install-foot-btn" style="background:#15803d;" onclick="shareStore()">🪪 दुकान कार्ड शेयर करें</button>
+      <button class="admin-open-btn" onclick="openAdmin()">⚙️ दुकान मैनेजर (Admin)</button>
+    </div>
+  </footer>
+
+  <!-- Full Shop Manager & Accounting Dashboard -->
+  <div id="adminBox">
+    <h3 style="color:var(--primary);margin-bottom:10px;">⚙️ दुकान मैनेजर एवं बहीखाता</h3>
+
+    <div class="adm-tabs">
+      <button class="adm-tab active" onclick="switchAdmTab('stock', this)">✏️ सभी उत्पाद कस्टमाइज करें</button>
+      <button class="adm-tab" onclick="switchAdmTab('add', this)">➕ नया उत्पाद एवं फोटो</button>
+      <button class="adm-tab" onclick="switchAdmTab('orders', this)">📦 ऑर्डर एवं डिलीवरी</button>
+      <button class="adm-tab" onclick="switchAdmTab('ledger', this)">📒 लेनदेन बहीखाता</button>
+      <button class="adm-tab" onclick="switchAdmTab('settings', this)">🚚 कैटेगरी, डिलीवरी व ऑफर</button>
+    </div>
+
+    <div class="adm-pane active" id="pane_stock">
+      <div class="admin-subcard">
+        <h4>✏️ हर उत्पाद का नाम, फोटो/आइकन, कैटेगरी, प्रकार, रेट व स्टॉक बदलें</h4>
+        <div id="admProductList"></div>
+        <button class="btn-sm-primary" onclick="saveAllAdmin()">💾 सभी बदलाव सेव करें</button>
+        <button class="btn-sm-outline" onclick="exportHtmlFile()">⬇️ ग्राहकों के लिए अपडेटेड index.html डाउनलोड करें</button>
+      </div>
+    </div>
+
+    <div class="adm-pane" id="pane_add">
+      <div class="admin-subcard">
+        <h4>➕ नया उत्पाद जोड़ें (फोटो, आइकन, कैटेगरी व प्रकार सहित)</h4>
+        <div class="field">
+          <label>उत्पाद का नाम *</label>
+          <input type="text" id="newName" placeholder="जैसे: ताज़ा पालक साग / देशी घी" />
+        </div>
+        <div class="admin-grid-2">
+          <div class="field">
+            <label>कैटेगरी (Category) *</label>
+            <select id="newCat"></select>
+          </div>
+          <div class="field">
+            <label>प्रकार (Type) *</label>
+            <select id="newType">
+              <option value="🌿 100% ऑर्गेनिक">🌿 100% ऑर्गेनिक</option>
+              <option value="🌱 प्राकृतिक खेती">🌱 प्राकृतिक खेती</option>
+              <option value="🌾 देशी उपज">🌾 देशी उपज</option>
+              <option value="🏡 घर का बना (Homemade)">🏡 घर का बना (Homemade)</option>
+              <option value="📦 नॉन-ऑर्गेनिक">📦 नॉन-ऑर्गेनिक</option>
+            </select>
+          </div>
+        </div>
+        <div class="admin-grid-2">
+          <div class="field">
+            <label>मात्रा / यूनिट *</label>
+            <input type="text" id="newUnit" placeholder="1 किलो / 500 ग्राम / 1 पैकेट" />
+          </div>
+          <div class="field">
+            <label>उपलब्ध स्टॉक (संख्या) *</label>
+            <input type="number" id="newStockQty" placeholder="20" value="20" />
+          </div>
+        </div>
+        <div class="admin-grid-3">
+          <div class="field">
+            <label>खरीद मूल्य (₹)</label>
+            <input type="number" id="newBuyPrice" placeholder="25" />
+          </div>
+          <div class="field">
+            <label>बिक्री मूल्य (₹) *</label>
+            <input type="number" id="newPrice" placeholder="35" />
+          </div>
+          <div class="field">
+            <label>MRP (₹)</label>
+            <input type="number" id="newMrp" placeholder="45" />
+          </div>
+        </div>
+
+        <div class="admin-grid-2">
+          <div class="field">
+            <label>आइकन / इमोजी चुनें या लिखें</label>
+            <input type="text" id="newEmoji" value="🌿" placeholder="कोई भी इमोजी डालें" />
+          </div>
+          <div class="field">
+            <label>या गैलरी से फोटो चुनें (वैकल्पिक)</label>
+            <input type="file" id="newPhotoInput" accept="image/*" onchange="handleNewPhoto(this)" style="padding:7px;font-size:12px;" />
+          </div>
+        </div>
+        <div id="newPhotoPreviewWrap" style="display:none;margin-bottom:10px;align-items:center;gap:10px;">
+          <img id="newPhotoPreview" src="" style="width:60px;height:60px;object-fit:cover;border-radius:10px;border:1px solid #cbd5e1;" />
+          <button type="button" class="clear-photo-btn" onclick="clearNewPhoto()">❌ फोटो हटाएं</button>
+        </div>
+
+        <button class="btn-sm-primary" onclick="addNewProduct()">➕ नया उत्पाद सेव करें</button>
+      </div>
+    </div>
+
+    <div class="adm-pane" id="pane_orders">
+      <div class="admin-subcard">
+        <h4>📦 सभी ऑर्डर (Pending / Delivered)</h4>
+        <div id="ordersListWrap"></div>
+      </div>
+    </div>
+
+    <div class="adm-pane" id="pane_ledger">
+      <div class="admin-subcard">
+        <h4>📒 खरीद-बिक्री एवं शुद्ध मुनाफा हिसाब</h4>
+        <div class="admin-grid-3" style="margin-bottom:12px;">
+          <div class="stat-box"><small>कुल खरीद (लागत)</small><strong id="statTotalBuy">₹0</strong></div>
+          <div class="stat-box"><small>कुल बिक्री (Delivered)</small><strong id="statTotalSell">₹0</strong></div>
+          <div class="stat-box"><small>शुद्ध मुनाफा</small><strong id="statTotalProfit">₹0</strong></div>
+        </div>
+
+        <h4 style="margin-top:10px;">➕ नई स्टॉक खरीद (Purchase) दर्ज करें</h4>
+        <div class="admin-grid-2">
+          <div class="field">
+            <label>उत्पाद चुनें</label>
+            <select id="purProdSel"></select>
+          </div>
+          <div class="field">
+            <label>कितनी मात्रा खरीदी?</label>
+            <input type="number" id="purQty" placeholder="10" />
+          </div>
+        </div>
+        <div class="field">
+          <label>प्रति यूनिट खरीद दर (₹ में)</label>
+          <input type="number" id="purRate" placeholder="25" />
+        </div>
+        <button class="btn-sm-primary" onclick="recordPurchase()">📥 खरीद जोड़ें (स्टॉक बढ़ाएं)</button>
+
+        <h4 style="margin-top:14px;">📜 पिछला लेनदेन (खरीद व बिक्री इतिहास)</h4>
+        <div id="ledgerHistoryWrap"></div>
+      </div>
+    </div>
+
+    <div class="adm-pane" id="pane_settings">
+      <div class="admin-subcard">
+        <h4>🗂️ नई कैटेगरी जोड़ें या मैनेज करें</h4>
+        <div style="display:flex;gap:6px;">
+          <input type="text" id="newCatNameInput" class="adm-input" placeholder="जैसे: 🥛 दूध व घी / 🍎 फल" />
+          <button type="button" onclick="addCustomCategory()" style="background:var(--primary);color:#fff;border:none;padding:0 14px;border-radius:8px;font-weight:700;font-size:12px;white-space:nowrap;cursor:pointer;">+ जोड़ें</button>
+        </div>
+        <div class="cat-chip-list" id="admCatChips"></div>
+      </div>
+
+      <div class="admin-subcard">
+        <h4>🚚 होम डिलीवरी चार्ज एवं ऑफर सेटिंग</h4>
+        <div class="field">
+          <label>डिलीवरी नियम चुनें</label>
+          <select id="admDelMode">
+            <option value="free_all">सभी ऑर्डर पर बिल्कुल फ्री डिलीवरी (₹0)</option>
+            <option value="fixed_all">सभी ऑर्डर पर फिक्स डिलीवरी चार्ज लगेगा</option>
+            <option value="free_above">तय राशि (Min Order) से ऊपर फ्री, वरना चार्ज</option>
+          </select>
+        </div>
+        <div class="admin-grid-2">
+          <div class="field">
+            <label>डिलीवरी चार्ज (₹ में)</label>
+            <input type="number" id="admDelCharge" />
+          </div>
+          <div class="field">
+            <label>कितने ₹ से ऊपर फ्री?</label>
+            <input type="number" id="admDelMinOrder" />
+          </div>
+        </div>
+        <div class="field">
+          <label>ऑफर पट्टी का संदेश</label>
+          <input type="text" id="admOfferText" />
+        </div>
+        <div class="admin-grid-2">
+          <div class="field">
+            <label>कूपन कोड</label>
+            <input type="text" id="admCouponCode" />
+          </div>
+          <div class="field">
+            <label>छूट (%)</label>
+            <input type="number" id="admCouponPct" />
+          </div>
+        </div>
+        <button class="btn-sm-primary" onclick="saveAllAdmin()">💾 सेटिंग्स सेव करें</button>
+        <button class="btn-sm-outline" onclick="exportHtmlFile()">⬇️ अपडेटेड index.html डाउनलोड करें</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-cart" id="floatingCart" onclick="document.getElementById('checkoutSection').scrollIntoView({behavior:'smooth'})">
+    <div class="fc-left">
+      <span id="fcItems">0 आइटम</span>
+      <strong>कुल ₹<span id="fcTotal">0</span></strong>
+    </div>
+    <div class="fc-right">ऑर्डर देखें →</div>
+  </div>
+
+  <script>
+    /* Direct 1-Click PWA Install Logic */
+    let deferredInstallPrompt = null;
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredInstallPrompt = e;
+    });
+
+    window.addEventListener('appinstalled', () => {
+      deferredInstallPrompt = null;
+      const b = document.getElementById('installBannerBox');
+      if (b) b.style.display = 'none';
+      const t = document.getElementById('installTopBtn');
+      if (t) t.style.display = 'none';
+      const f = document.getElementById('installFootBtn');
+      if (f) f.style.display = 'none';
+    });
+
+    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+      document.addEventListener('DOMContentLoaded', () => {
+        const b = document.getElementById('installBannerBox');
+        if (b) b.style.display = 'none';
+        const t = document.getElementById('installTopBtn');
+        if (t) t.style.display = 'none';
+        const f = document.getElementById('installFootBtn');
+        if (f) f.style.display = 'none';
+      });
+    }
+
+    async function triggerAppInstall() {
+      if (deferredInstallPrompt) {
+        deferredInstallPrompt.prompt();
+        const { outcome } = await deferredInstallPrompt.userChoice;
+        if (outcome === 'accepted') {
+          deferredInstallPrompt = null;
+        }
+      } else {
+        document.getElementById('installGuideModal').style.display = 'flex';
+      }
+    }
+
+    /* My Dukaan Style Digital Visiting Card & Share Functions */
+    function shareStore() {
+      document.getElementById('shareCardModal').style.display = 'flex';
+    }
+
+    function generateCardCanvas() {
+      const c = document.createElement('canvas');
+      c.width = 900; c.height = 540;
+      const ctx = c.getContext('2d');
+
+      const grad = ctx.createLinearGradient(0, 0, 900, 540);
+      grad.addColorStop(0, '#14532d');
+      grad.addColorStop(0.6, '#166534');
+      grad.addColorStop(1, '#0f3d21');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 900, 540);
+
+      ctx.strokeStyle = '#facc15';
+      ctx.lineWidth = 10;
+      ctx.strokeRect(18, 18, 864, 504);
+
+      ctx.fillStyle = '#facc15';
+      ctx.beginPath();
+      ctx.roundRect(230, 42, 440, 42, 21);
+      ctx.fill();
+      ctx.fillStyle = '#14532d';
+      ctx.font = 'bold 21px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('🌿 100% प्राकृतिक एवं रसायन-मुक्त उपज', 450, 70);
+
+      ctx.fillStyle = '#dcfce7';
+      ctx.beginPath();
+      ctx.roundRect(405, 102, 90, 90, 22);
+      ctx.fill();
+      ctx.font = '54px serif';
+      ctx.fillText('🌱', 450, 165);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 42px sans-serif';
+      ctx.fillText('प्रज्ञा भूमि प्राकृतिक फार्म', 450, 245);
+
+      ctx.fillStyle = '#bbf7d0';
+      ctx.font = '24px sans-serif';
+      ctx.fillText('ताज़ी देशी सब्जियां • साग • सलाद • मसाला • अचार • चावल', 450, 290);
+
+      ctx.fillStyle = '#fde047';
+      ctx.font = 'bold 23px sans-serif';
+      ctx.fillText('📍 मेरु (BSF), हजारीबाग   |   📞 +91 8210481088', 450, 340);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.roundRect(130, 375, 640, 62, 14);
+      ctx.fill();
+      ctx.fillStyle = '#14532d';
+      ctx.font = 'bold 25px sans-serif';
+      ctx.fillText('🛒 ऑनलाइन ऑर्डर करें: https://pragyafarm.netlify.app', 450, 415);
+
+      ctx.fillStyle = '#bbf7d0';
+      ctx.font = '20px sans-serif';
+      ctx.fillText('📲 लिंक खोलकर ऊपर "ऐप इंस्टॉल करें" दबाएं और फोन में सेव करें', 450, 478);
+
+      return c;
+    }
+
+    function downloadVisitingCard() {
+      const c = generateCardCanvas();
+      const a = document.createElement('a');
+      a.href = c.toDataURL('image/png');
+      a.download = 'Pragya-Bhoomi-Store-Card.png';
+      a.click();
+    }
+
+    async function shareCardOnWhatsApp() {
+      const shareText = `🌱 *प्रज्ञा भूमि प्राकृतिक फार्म* (मेरु, हजारीबाग)\nताज़ी रसायन-मुक्त देशी सब्जियां, साग, मसाले व चावल अब घर बैठे मंगाएं!\n\n🛒 *ऑनलाइन स्टोर लिंक:*\n👉 https://pragyafarm.netlify.app\n\n📲 *ऐप इंस्टॉल करने के लिए:* लिंक खोलकर ऊपर *"📲 ऐप इंस्टॉल करें"* बटन दबाएं!\n📞 संपर्क: +91 8210481088`;
+      const c = generateCardCanvas();
+      c.toBlob(async function(blob) {
+        if (blob && navigator.share && navigator.canShare) {
+          const file = new File([blob], 'Pragya-Bhoomi-Card.png', { type: 'image/png' });
+          if (navigator.canShare({ files: [file] })) {
+            try {
+              await navigator.share({
+                files: [file],
+                title: 'प्रज्ञा भूमि प्राकृतिक फार्म',
+                text: shareText
+              });
+              return;
+            } catch (err) {}
+          }
+        }
+        window.open(`https://wa.me/?text=${encodeURIComponent(shareText)}`, '_blank');
+      }, 'image/png');
+    }
+
+    function copyStoreLink() {
+      const url = 'https://pragyafarm.netlify.app';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(() => alert('✅ स्टोर लिंक कॉपी हो गया!'));
+      } else {
+        prompt('लिंक कॉपी करें:', url);
+      }
+    }
+
+    const DEFAULT_CATEGORIES = [
+      { id: "saag", label: "🌿 साग" },
+      { id: "sabji", label: "🥬 सब्जी" },
+      { id: "salad", label: "🥗 सलाद" },
+      { id: "masala", label: "🌶️ मसाला" },
+      { id: "achar", label: "🫙 अचार" },
+      { id: "grain", label: "🌾 चावल व अनाज" },
+      { id: "other", label: "🍯 अन्य उत्पाद" }
+    ];
+
+    const PRODUCT_TYPES = [
+      "🌿 100% ऑर्गेनिक",
+      "🌱 प्राकृतिक खेती",
+      "🌾 देशी उपज",
+      "🏡 घर का बना (Homemade)",
+      "📦 नॉन-ऑर्गेनिक"
+    ];
+
+    const INITIAL_PRODUCTS = [
+      { id: 101, name: "देसी लाल आलू", unit: "1 किलो", buyPrice: 24, price: 35, mrp: 45, stockQty: 50, cat: "sabji", typeLabel: "🌿 100% ऑर्गेनिक", emoji: "🥔", image: "", stock: true },
+      { id: 102, name: "ताज़ी देसी गाजर", unit: "1 किलो", buyPrice: 30, price: 45, mrp: 60, stockQty: 30, cat: "salad", typeLabel: "🌿 100% ऑर्गेनिक", emoji: "🥕", image: "", stock: true },
+      { id: 103, name: "हरी पत्तेदार मूली", unit: "1 किलो", buyPrice: 15, price: 25, mrp: 35, stockQty: 40, cat: "salad", typeLabel: "🌿 100% ऑर्गेनिक", emoji: "🥗", image: "", stock: true },
+      { id: 104, name: "ताज़ा देसी पालक साग", unit: "500 ग्राम", buyPrice: 12, price: 20, mrp: 30, stockQty: 25, cat: "saag", typeLabel: "🌿 100% ऑर्गेनिक", emoji: "🌿", image: "", stock: true },
+      { id: 105, name: "बांस करेल (ताज़ा)", unit: "500 ग्राम", buyPrice: 40, price: 60, mrp: 80, stockQty: 20, cat: "sabji", typeLabel: "🌿 100% ऑर्गेनिक", emoji: "🎋", image: "", stock: true },
+      { id: 106, name: "देसी जैविक लहसुन", unit: "250 ग्राम", buyPrice: 50, price: 70, mrp: 90, stockQty: 35, cat: "masala", typeLabel: "🌿 100% ऑर्गेनिक", emoji: "🧄", image: "", stock: true },
+      { id: 107, name: "शुद्ध देसी हल्दी पाउडर", unit: "250 ग्राम", buyPrice: 60, price: 85, mrp: 110, stockQty: 20, cat: "masala", typeLabel: "🏡 घर का बना (Homemade)", emoji: "🌶️", image: "", stock: true },
+      { id: 108, name: "घर का देसी आम का अचार", unit: "500 ग्राम", buyPrice: 95, price: 140, mrp: 180, stockQty: 15, cat: "achar", typeLabel: "🏡 घर का बना (Homemade)", emoji: "🫙", image: "", stock: true },
+      { id: 109, name: "प्राकृतिक अरवा चावल", unit: "5 किलो", buyPrice: 260, price: 320, mrp: 375, stockQty: 25, cat: "grain", typeLabel: "🌱 प्राकृतिक खेती", emoji: "🍚", image: "", stock: true },
+      { id: 110, name: "पुराना सुगंधित चावल", unit: "5 किलो", buyPrice: 310, price: 380, mrp: 440, stockQty: 20, cat: "grain", typeLabel: "🌱 प्राकृतिक खेती", emoji: "🌾", image: "", stock: true }
+    ];
+
+    let storeData = null;
+    try { storeData = JSON.parse(localStorage.getItem('pb_dukaan_v11')); } catch (e) {}
+    if (!storeData || !Array.isArray(storeData.products)) {
+      storeData = {
+        offerText: "🎁 आज का ऑफर: ताज़ी देशी उपज सीधे खेत से | कूपन कोड: PRAGYA10 (10% छूट)",
+        couponCode: "PRAGYA10",
+        couponPct: 10,
+        delMode: "free_above",
+        delCharge: 30,
+        delMinOrder: 300,
+        categories: DEFAULT_CATEGORIES,
+        products: INITIAL_PRODUCTS,
+        orders: [],
+        ledger: []
+      };
+    }
+    if (!Array.isArray(storeData.categories) || !storeData.categories.length) storeData.categories = DEFAULT_CATEGORIES;
+    if (!storeData.orders) storeData.orders = [];
+    if (!storeData.ledger) storeData.ledger = [];
+
+    let cart = {};
+    let activeCat = 'all';
+    let appliedDiscountPct = 0;
+    let pendingNewPhotoData = "";
+
+    function escHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
+    function persist() {
+      try {
+        localStorage.setItem('pb_dukaan_v11', JSON.stringify(storeData));
+      } catch (e) {
+        alert('⚠️ फोटो का साइज ज्यादा होने से स्टोरेज भर गया है। कृपया छोटी फोटो चुनें।');
+      }
+    }
+
+    function compressImageFile(file, callback) {
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          const maxSide = 260;
+          let w = img.width, h = img.height;
+          if (w > h) { if (w > maxSide) { h = Math.round(h * maxSide / w); w = maxSide; } }
+          else { if (h > maxSide) { w = Math.round(w * maxSide / h); h = maxSide; } }
+          canvas.width = w; canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          callback(canvas.toDataURL('image/jpeg', 0.78));
+        };
+        img.src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function getCatLabel(catId) {
+      const found = storeData.categories.find(c => c.id === catId);
+      return found ? found.label : catId;
+    }
+
+    function renderCategoryTabs() {
+      const bar = document.getElementById('catBar');
+      let html = `<button class="cat-pill ${activeCat === 'all' ? 'active' : ''}" onclick="selectCat('all', this)">सभी उत्पाद</button>`;
+      html += `<button class="cat-pill ${activeCat === 'organic_only' ? 'active' : ''}" onclick="selectCat('organic_only', this)">🌿 100% ऑर्गेनिक</button>`;
+      storeData.categories.forEach(c => {
+        html += `<button class="cat-pill ${activeCat === c.id ? 'active' : ''}" onclick="selectCat('${c.id}', this)">${escHtml(c.label)}</button>`;
+      });
+      bar.innerHTML = html;
+    }
+
+    function updateStoreBanners() {
+      document.getElementById('offerBanner').innerText = storeData.offerText;
+      const dBar = document.getElementById('deliveryRuleBanner');
+      const dTypeSel = document.getElementById('deliveryType');
+      if (storeData.delMode === 'free_all') {
+        dBar.innerText = "🚚 होम डिलीवरी: सभी ऑर्डर पर बिल्कुल फ्री (₹0)";
+        dTypeSel.options[0].text = "🚚 होम डिलीवरी (बिल्कुल फ्री - ₹0)";
+      } else if (storeData.delMode === 'fixed_all') {
+        dBar.innerText = `🚚 होम डिलीवरी चार्ज: ₹${storeData.delCharge} प्रति ऑर्डर`;
+        dTypeSel.options[0].text = `🚚 होम डिलीवरी (चार्ज: ₹${storeData.delCharge})`;
+      } else {
+        dBar.innerText = `🚚 होम डिलीवरी: ₹${storeData.delMinOrder}+ के ऑर्डर पर फ्री (वरना ₹${storeData.delCharge})`;
+        dTypeSel.options[0].text = `🚚 होम डिलीवरी (₹${storeData.delMinOrder}+ पर फ्री, वरना ₹${storeData.delCharge})`;
+      }
+    }
+
+    function selectCat(cat, btn) {
+      activeCat = cat;
+      document.querySelectorAll('.cat-pill').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      document.getElementById('catHeading').innerText =
+        cat === 'all' ? 'सभी उपलब्ध उत्पाद' :
+        cat === 'organic_only' ? '🌿 100% ऑर्गेनिक उत्पाद' : getCatLabel(cat);
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const list = document.getElementById('productList');
+      list.innerHTML = '';
+
+      const visible = storeData.products.filter(p => {
+        if (p.stock === false) return false;
+        const tLabel = p.typeLabel || "🌿 100% ऑर्गेनिक";
+        if (activeCat === 'organic_only' && !tLabel.includes('ऑर्गेनिक')) return false;
+        if (activeCat !== 'all' && activeCat !== 'organic_only' && p.cat !== activeCat) return false;
+        if (q && !p.name.toLowerCase().includes(q)) return false;
+        return true;
+      });
+
+      document.getElementById('itemCountText').innerText = visible.length + " आइटम";
+
+      visible.forEach(p => {
+        const qty = cart[p.id] || 0;
+        const offPct = (p.mrp && p.mrp > p.price) ? Math.round(((p.mrp - p.price) / p.mrp) * 100) : 0;
+        const tLabel = p.typeLabel || "🌿 100% ऑर्गेनिक";
+        const isNonOrg = tLabel.includes('नॉन-ऑर्गेनिक');
+        const inStock = (p.stockQty === undefined || p.stockQty > 0);
+        const thumbHtml = p.image
+          ? `<img src="${p.image}" alt="${escHtml(p.name)}" />`
+          : `<span>${escHtml(p.emoji || '🌱')}</span>`;
+
+        const row = document.createElement('div');
+        row.className = 'p-card';
+        row.innerHTML = `
+          <div class="p-thumb">
+            ${offPct > 0 ? `<span class="discount-tag">${offPct}% OFF</span>` : ''}
+            ${thumbHtml}
+          </div>
+          <div class="p-details">
+            <div class="badges-row">
+              <span class="${isNonOrg ? 'p-tag-nonorg' : 'p-tag'}">${escHtml(tLabel)}</span>
+              <span class="p-cat-badge">${escHtml(getCatLabel(p.cat))}</span>
+              ${p.stockQty !== undefined ? `<span class="p-stock-badge">स्टॉक: ${p.stockQty}</span>` : ''}
+            </div>
+            <div class="p-name">${escHtml(p.name)}</div>
+            <div class="p-unit">${escHtml(p.unit)}</div>
+            <div class="p-price-row">
+              <span class="p-price">₹${p.price}</span>
+              ${p.mrp && p.mrp > p.price ? `<span class="p-mrp">₹${p.mrp}</span>` : ''}
+            </div>
+          </div>
+          <div>
+            ${!inStock ? `<span class="out-btn">स्टॉक खत्म</span>` : (qty === 0
+              ? `<button class="add-btn" onclick="updateQty(${p.id}, 1)">ADD +</button>`
+              : `<div class="stepper"><button onclick="updateQty(${p.id}, -1)">−</button><span>${qty}</span><button onclick="updateQty(${p.id}, 1)">+</button></div>`
+            )}
+          </div>
+        `;
+        list.appendChild(row);
+      });
+    }
+
+    function updateQty(id, delta) {
+      const p = storeData.products.find(x => x.id == id);
+      const next = (cart[id] || 0) + delta;
+      if (p && p.stockQty !== undefined && next > p.stockQty) {
+        alert(`अभी केवल ${p.stockQty} स्टॉक ही उपलब्ध है!`);
+        return;
+      }
+      cart[id] = next;
+      if (cart[id] <= 0) delete cart[id];
+      renderProducts();
+      updateBill();
+    }
+
+    function applyCoupon() {
+      const code = document.getElementById('couponInput').value.trim().toUpperCase();
+      if (storeData.couponCode && code === storeData.couponCode.toUpperCase()) {
+        appliedDiscountPct = Number(storeData.couponPct) || 0;
+        alert(`🎉 ${appliedDiscountPct}% छूट लागू हो गई!`);
+      } else {
+        appliedDiscountPct = 0;
+        alert('❌ अमान्य कूपन कोड');
+      }
+      updateBill();
+    }
+
+    function calculateDelivery(afterDiscount) {
+      const dType = document.getElementById('deliveryType').value;
+      if (dType === 'pickup' || afterDiscount === 0) return 0;
+      if (storeData.delMode === 'free_all') return 0;
+      if (storeData.delMode === 'fixed_all') return Number(storeData.delCharge) || 0;
+      return afterDiscount >= (Number(storeData.delMinOrder) || 0) ? 0 : (Number(storeData.delCharge) || 0);
+    }
+
+    function updateBill() {
+      let count = 0, subtotal = 0, lines = [];
+      for (const id in cart) {
+        const p = storeData.products.find(x => x.id == id);
+        if (p) {
+          count += cart[id];
+          subtotal += p.price * cart[id];
+          lines.push(`• ${escHtml(p.name)} (${escHtml(p.unit)}) × ${cart[id]} = ₹${p.price * cart[id]}`);
+        }
+      }
+      const discountAmt = Math.round((subtotal * appliedDiscountPct) / 100);
+      const afterDiscount = subtotal - discountAmt;
+      const delivery = calculateDelivery(afterDiscount);
+      const total = afterDiscount + delivery;
+
+      const fc = document.getElementById('floatingCart');
+      if (count > 0) {
+        fc.style.display = 'flex';
+        document.getElementById('fcItems').innerText = `${count} आइटम टोकरी में`;
+        document.getElementById('fcTotal').innerText = total;
+      } else {
+        fc.style.display = 'none';
+      }
+
+      const bill = document.getElementById('billSummary');
+      if (count === 0) {
+        bill.innerHTML = 'आपकी टोकरी खाली है। ऊपर से उत्पाद जोड़ें।';
+      } else {
+        bill.innerHTML = `${lines.join('<br>')}<hr style="margin:8px 0;border:0;border-top:1px dashed #cbd5e1;">सामान: <strong>₹${subtotal}</strong><br>${discountAmt > 0 ? `छूट: <strong>−₹${discountAmt}</strong><br>` : ''}डिलीवरी: <strong>${delivery === 0 ? 'फ्री (₹0)' : '₹' + delivery}</strong><br><span style="font-size:16px;color:#14532d;">कुल राशि: <strong>₹${total}</strong></span>`;
+      }
+
+      const mode = document.getElementById('paymentMode').value;
+      const qrPanel = document.getElementById('qrPanel');
+      if (mode === 'UPI' && total > 0) {
+        qrPanel.style.display = 'block';
+        document.getElementById('qrAmount').innerText = total;
+        const upi = `upi://pay?pa=Info.pavhzb-2@oksbi&pn=Pragya%20Bhoomi&am=${total}&cu=INR`;
+        document.getElementById('qrImg').src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(upi)}`;
+      } else {
+        qrPanel.style.display = 'none';
+      }
+    }
+
+    function placeWhatsAppOrder() {
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const addr = document.getElementById('custAddress').value.trim();
+      const mode = document.getElementById('paymentMode').value;
+      let lines = [], orderItems = [], subtotal = 0, costTotal = 0;
+      for (const id in cart) {
+        const p = storeData.products.find(x => x.id == id);
+        if (p) {
+          subtotal += p.price * cart[id];
+          costTotal += (Number(p.buyPrice) || 0) * cart[id];
+          lines.push(`${p.name} (${p.unit}) x ${cart[id]} = ₹${p.price * cart[id]}`);
+          orderItems.push({ id: p.id, name: p.name, qty: cart[id], sellPrice: p.price, buyPrice: Number(p.buyPrice) || 0 });
+        }
+      }
+      if (!lines.length || !name || !phone || !addr) { alert('कृपया सामान चुनें और नाम, मोबाइल व पता भरें!'); return; }
+      const discountAmt = Math.round((subtotal * appliedDiscountPct) / 100);
+      const delivery = calculateDelivery(subtotal - discountAmt);
+      const total = subtotal - discountAmt + delivery;
+
+      const orderObj = {
+        orderId: 'ORD-' + String(Date.now()).slice(-5),
+        date: new Date().toLocaleString('hi-IN'),
+        customer: name,
+        phone: phone,
+        address: addr,
+        items: orderItems,
+        itemsSummary: lines.join(', '),
+        subtotal: subtotal - discountAmt,
+        costTotal: costTotal,
+        delivery: delivery,
+        total: total,
+        status: 'Pending'
+      };
+      storeData.orders.unshift(orderObj);
+      persist();
+
+      const text = `🌱 *नया ऑर्डर (${orderObj.orderId}) - प्रज्ञा भूमि प्राकृतिक फार्म*\n*ग्राहक:* ${name} (${phone})\n*पता:* ${addr}\n\n${lines.join('\n')}\n\n*डिलीवरी:* ₹${delivery}\n*कुल:* ₹${total} (${mode})`;
+      window.open(`https://wa.me/918210481088?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    /* Admin Functions */
+    function openAdmin() {
+      if (prompt('PIN दर्ज करें (1234):') !== '1234') return;
+      const box = document.getElementById('adminBox');
+      box.style.display = 'block';
+      document.getElementById('admDelMode').value = storeData.delMode;
+      document.getElementById('admDelCharge').value = storeData.delCharge;
+      document.getElementById('admDelMinOrder').value = storeData.delMinOrder;
+      document.getElementById('admOfferText').value = storeData.offerText;
+      document.getElementById('admCouponCode').value = storeData.couponCode;
+      document.getElementById('admCouponPct').value = storeData.couponPct;
+      refreshAdminViews();
+      box.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function switchAdmTab(tabName, btn) {
+      document.querySelectorAll('.adm-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.adm-pane').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('pane_' + tabName).classList.add('active');
+      refreshAdminViews();
+    }
+
+    function refreshAdminViews() {
+      populateCategorySelects();
+      renderAdminProducts();
+      renderOrdersList();
+      renderLedgerView();
+      renderAdminCategories();
+    }
+
+    function populateCategorySelects() {
+      const newCatSel = document.getElementById('newCat');
+      if (newCatSel) {
+        const prev = newCatSel.value;
+        newCatSel.innerHTML = storeData.categories.map(c => `<option value="${c.id}">${escHtml(c.label)}</option>`).join('');
+        if (prev) newCatSel.value = prev;
+      }
+      const purSel = document.getElementById('purProdSel');
+      if (purSel) {
+        purSel.innerHTML = storeData.products.map(p => `<option value="${p.id}">${escHtml(p.name)} (${escHtml(p.unit)})</option>`).join('');
+      }
+    }
+
+    function renderAdminCategories() {
+      const wrap = document.getElementById('admCatChips');
+      if (!wrap) return;
+      wrap.innerHTML = storeData.categories.map((c, idx) => `
+        <span class="cat-chip">
+          ${escHtml(c.label)}
+          <button type="button" onclick="deleteCategory(${idx})" style="border:none;background:none;color:#dc2626;font-weight:800;cursor:pointer;">×</button>
+        </span>
+      `).join('');
+    }
+
+    function addCustomCategory() {
+      const val = document.getElementById('newCatNameInput').value.trim();
+      if (!val) { alert('कैटेगरी का नाम लिखें!'); return; }
+      const id = 'cat_' + Date.now();
+      storeData.categories.push({ id, label: val });
+      document.getElementById('newCatNameInput').value = '';
+      persist();
+      renderCategoryTabs();
+      refreshAdminViews();
+      alert(`✅ "${val}" कैटेगरी जुड़ गई!`);
+    }
+
+    function deleteCategory(idx) {
+      if (storeData.categories.length <= 1) { alert('कम से कम एक कैटेगरी रहना ज़रूरी है!'); return; }
+      if (!confirm('क्या आप इस कैटेगरी को हटाना चाहते हैं?')) return;
+      storeData.categories.splice(idx, 1);
+      persist();
+      renderCategoryTabs();
+      refreshAdminViews();
+    }
+
+    function handleNewPhoto(input) {
+      if (!input.files || !input.files[0]) return;
+      compressImageFile(input.files[0], function(dataUrl) {
+        pendingNewPhotoData = dataUrl;
+        document.getElementById('newPhotoPreview').src = dataUrl;
+        document.getElementById('newPhotoPreviewWrap').style.display = 'flex';
+      });
+    }
+
+    function clearNewPhoto() {
+      pendingNewPhotoData = "";
+      document.getElementById('newPhotoInput').value = "";
+      document.getElementById('newPhotoPreviewWrap').style.display = 'none';
+    }
+
+    function changeExistingPhoto(idx, input) {
+      if (!input.files || !input.files[0]) return;
+      compressImageFile(input.files[0], function(dataUrl) {
+        storeData.products[idx].image = dataUrl;
+        persist();
+        renderProducts();
+        renderAdminProducts();
+      });
+    }
+
+    function removeExistingPhoto(idx) {
+      storeData.products[idx].image = "";
+      persist();
+      renderProducts();
+      renderAdminProducts();
+    }
+
+    function liveUpdateField(idx, field, value) {
+      if (!storeData.products[idx]) return;
+      if (field === 'buyPrice' || field === 'price' || field === 'mrp' || field === 'stockQty') {
+        storeData.products[idx][field] = parseInt(value) || 0;
+      } else if (field === 'stock') {
+        storeData.products[idx][field] = Boolean(value);
+      } else {
+        storeData.products[idx][field] = value;
+      }
+      if (field === 'name') {
+        const titleEl = document.getElementById(`adm_title_${idx}`);
+        if (titleEl) titleEl.innerText = `#${idx + 1} ${value || 'बिना नाम'}`;
+      }
+      if (field === 'price' || field === 'buyPrice' || field === 'stockQty') {
+        const p = storeData.products[idx];
+        const infoEl = document.getElementById(`adm_profit_${idx}`);
+        if (infoEl) infoEl.innerHTML = `मुनाफा: <b>₹${p.price - (p.buyPrice || 0)}</b> | स्टॉक: <b>${p.stockQty ?? 0}</b>`;
+      }
+      persist();
+      renderProducts();
+      updateBill();
+    }
+
+    function renderAdminProducts() {
+      const wrap = document.getElementById('admProductList');
+      wrap.innerHTML = storeData.products.map((p, i) => {
+        const catOptions = storeData.categories.map(c =>
+          `<option value="${c.id}" ${p.cat === c.id ? 'selected' : ''}>${escHtml(c.label)}</option>`
+        ).join('');
+
+        const curType = p.typeLabel || "🌿 100% ऑर्गेनिक";
+        const typeOptions = PRODUCT_TYPES.map(t =>
+          `<option value="${escHtml(t)}" ${curType === t ? 'selected' : ''}>${escHtml(t)}</option>`
+        ).join('');
+
+        const previewHtml = p.image
+          ? `<img src="${p.image}" alt="" />`
+          : `<span>${escHtml(p.emoji || '🌱')}</span>`;
+
+        return `
+        <div class="admin-item-row">
+          <div class="admin-item-top">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div class="adm-preview-box">${previewHtml}</div>
+              <div>
+                <div id="adm_title_${i}" style="font-size:13px;">#${i + 1} ${escHtml(p.name)}</div>
+                <div style="margin-top:4px;display:flex;gap:5px;flex-wrap:wrap;">
+                  <label class="photo-btn">
+                    📷 फोटो बदलें
+                    <input type="file" accept="image/*" style="display:none;" onchange="changeExistingPhoto(${i}, this)" />
+                  </label>
+                  ${p.image ? `<button type="button" class="clear-photo-btn" onclick="removeExistingPhoto(${i})">फोटो हटाएं</button>` : ''}
+                </div>
+              </div>
+            </div>
+            <button type="button" class="del-btn" onclick="deleteProduct(${i})">🗑️ हटाएं</button>
+          </div>
+
+          <div style="margin-bottom:8px;">
+            <span class="adm-lbl">✏️ उत्पाद का पूरा नाम (यहाँ बदलें)</span>
+            <input type="text" id="adm_name_${i}" class="adm-input" value="${escHtml(p.name)}"
+              oninput="liveUpdateField(${i}, 'name', this.value)"
+              onchange="liveUpdateField(${i}, 'name', this.value)"
+              placeholder="उत्पाद का नया नाम लिखें" />
+          </div>
+
+          <div class="admin-grid-2" style="margin-bottom:8px;">
+            <div>
+              <span class="adm-lbl">मात्रा / यूनिट</span>
+              <input type="text" id="adm_unit_${i}" class="adm-input" value="${escHtml(p.unit)}"
+                oninput="liveUpdateField(${i}, 'unit', this.value)"
+                onchange="liveUpdateField(${i}, 'unit', this.value)" />
+            </div>
+            <div>
+              <span class="adm-lbl">आइकन (इमोजी)</span>
+              <input type="text" id="adm_emoji_${i}" class="adm-input" value="${escHtml(p.emoji || '🌱')}"
+                oninput="liveUpdateField(${i}, 'emoji', this.value)"
+                onchange="liveUpdateField(${i}, 'emoji', this.value)" />
+            </div>
+          </div>
+
+          <div class="admin-grid-2" style="margin-bottom:8px;">
+            <div>
+              <span class="adm-lbl">कैटेगरी (Category)</span>
+              <select id="adm_cat_${i}" class="adm-input" onchange="liveUpdateField(${i}, 'cat', this.value)">${catOptions}</select>
+            </div>
+            <div>
+              <span class="adm-lbl">प्रकार (Type)</span>
+              <select id="adm_type_${i}" class="adm-input" onchange="liveUpdateField(${i}, 'typeLabel', this.value)">${typeOptions}</select>
+            </div>
+          </div>
+
+          <div class="admin-grid-3" style="margin-bottom:8px;">
+            <div>
+              <span class="adm-lbl">खरीद दर (₹)</span>
+              <input type="number" id="adm_b_${i}" class="adm-input" value="${p.buyPrice || 0}"
+                oninput="liveUpdateField(${i}, 'buyPrice', this.value)" />
+            </div>
+            <div>
+              <span class="adm-lbl">बिक्री दर (₹)</span>
+              <input type="number" id="adm_p_${i}" class="adm-input" value="${p.price}"
+                oninput="liveUpdateField(${i}, 'price', this.value)" />
+            </div>
+            <div>
+              <span class="adm-lbl">MRP / स्टॉक</span>
+              <div style="display:flex;gap:4px;">
+                <input type="number" id="adm_m_${i}" class="adm-input" value="${p.mrp || p.price}" title="MRP"
+                  oninput="liveUpdateField(${i}, 'mrp', this.value)" />
+                <input type="number" id="adm_q_${i}" class="adm-input" value="${p.stockQty ?? 0}" title="स्टॉक"
+                  oninput="liveUpdateField(${i}, 'stockQty', this.value)" />
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;font-size:11px;padding-top:6px;border-top:1px dashed #e5e7eb;">
+            <span id="adm_profit_${i}">मुनाफा: <b>₹${(p.price - (p.buyPrice || 0))}</b> | स्टॉक: <b>${p.stockQty ?? 0}</b></span>
+            <label style="font-weight:700;"><input type="checkbox" id="adm_s_${i}" ${p.stock !== false ? 'checked' : ''}
+              onchange="liveUpdateField(${i}, 'stock', this.checked)" /> दुकान में दिखाएं</label>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function deleteProduct(i) {
+      if (!confirm('क्या आप वाकई इस उत्पाद को हटाना चाहते हैं?')) return;
+      storeData.products.splice(i, 1);
+      persist();
+      renderProducts();
+      refreshAdminViews();
+    }
+
+    function addNewProduct() {
+      const name = document.getElementById('newName').value.trim();
+      const unit = document.getElementById('newUnit').value.trim();
+      const price = parseInt(document.getElementById('newPrice').value);
+      const buyPrice = parseInt(document.getElementById('newBuyPrice').value) || 0;
+      const stockQty = parseInt(document.getElementById('newStockQty').value) || 0;
+      const emoji = document.getElementById('newEmoji').value.trim() || '🌱';
+      const cat = document.getElementById('newCat').value;
+      const typeLabel = document.getElementById('newType').value;
+
+      if (!name || !unit || !price) { alert('कृपया उत्पाद का नाम, मात्रा और बिक्री मूल्य भरें!'); return; }
+
+      const newProd = {
+        id: Date.now(),
+        name,
+        unit,
+        buyPrice,
+        price,
+        mrp: parseInt(document.getElementById('newMrp').value) || price,
+        stockQty,
+        cat,
+        typeLabel,
+        emoji,
+        image: pendingNewPhotoData || "",
+        stock: true
+      };
+      storeData.products.unshift(newProd);
+
+      if (stockQty > 0 && buyPrice > 0) {
+        storeData.ledger.unshift({
+          type: 'BUY',
+          date: new Date().toLocaleString('hi-IN'),
+          title: `स्टॉक खरीद: ${name} (${stockQty} × ₹${buyPrice})`,
+          amount: stockQty * buyPrice
+        });
+      }
+
+      document.getElementById('newName').value = '';
+      document.getElementById('newUnit').value = '';
+      document.getElementById('newPrice').value = '';
+      document.getElementById('newBuyPrice').value = '';
+      document.getElementById('newMrp').value = '';
+      clearNewPhoto();
+
+      persist();
+      renderProducts();
+      refreshAdminViews();
+      alert(`✅ "${name}" सफलतापूर्वक जोड़ दिया गया!`);
+    }
+
+    function renderOrdersList() {
+      const wrap = document.getElementById('ordersListWrap');
+      if (!storeData.orders.length) {
+        wrap.innerHTML = '<p style="font-size:12px;color:#6b7280;">अभी तक कोई ऑर्डर दर्ज नहीं हुआ है।</p>';
+        return;
+      }
+      wrap.innerHTML = storeData.orders.map((o, idx) => `
+        <div class="admin-item-row">
+          <div class="admin-item-top">
+            <span>${escHtml(o.orderId)} • ${escHtml(o.customer)} (${escHtml(o.phone)})</span>
+            ${o.status === 'Delivered'
+              ? `<span class="status-badge-delivered">✅ Delivered</span>`
+              : `<span class="status-badge-pending">⏳ Pending</span>`
+            }
+          </div>
+          <p style="font-size:11px;color:#4b5563;margin-bottom:4px;">📅 ${escHtml(o.date)} | 📍 ${escHtml(o.address)}</p>
+          <p style="font-size:12px;margin-bottom:6px;">🛒 ${escHtml(o.itemsSummary)}</p>
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <strong style="font-size:13px;color:#14532d;">बिल: ₹${o.total}</strong>
+            ${o.status !== 'Delivered'
+              ? `<button class="deliver-btn" onclick="markOrderDelivered(${idx})">✔ Delivered मार्क करें</button>`
+              : `<span style="font-size:11px;color:#15803d;">स्टॉक व बहीखाता अपडेटेड</span>`
+            }
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function markOrderDelivered(idx) {
+      const o = storeData.orders[idx];
+      if (!o || o.status === 'Delivered') return;
+      o.status = 'Delivered';
+      o.deliveredAt = new Date().toLocaleString('hi-IN');
+
+      (o.items || []).forEach(it => {
+        const prod = storeData.products.find(p => p.id == it.id);
+        if (prod && prod.stockQty !== undefined) {
+          prod.stockQty = Math.max(0, Number(prod.stockQty) - Number(it.qty));
+        }
+      });
+
+      storeData.ledger.unshift({
+        type: 'SELL',
+        date: o.deliveredAt,
+        title: `बिक्री (${o.orderId} - ${o.customer})`,
+        amount: o.subtotal,
+        cost: o.costTotal || 0,
+        profit: (o.subtotal - (o.costTotal || 0))
+      });
+
+      persist();
+      renderProducts();
+      refreshAdminViews();
+      alert(`✅ ऑर्डर ${o.orderId} Delivered हो गया और स्टॉक घट गया!`);
+    }
+
+    function recordPurchase() {
+      const pid = document.getElementById('purProdSel').value;
+      const qty = parseInt(document.getElementById('purQty').value) || 0;
+      const rate = parseInt(document.getElementById('purRate').value) || 0;
+      const prod = storeData.products.find(p => p.id == pid);
+      if (!prod || qty <= 0 || rate <= 0) { alert('उत्पाद, मात्रा और खरीद दर सही भरें!'); return; }
+
+      prod.stockQty = (Number(prod.stockQty) || 0) + qty;
+      prod.buyPrice = rate;
+
+      storeData.ledger.unshift({
+        type: 'BUY',
+        date: new Date().toLocaleString('hi-IN'),
+        title: `स्टॉक खरीद: ${prod.name} (${qty} × ₹${rate})`,
+        amount: qty * rate
+      });
+
+      document.getElementById('purQty').value = '';
+      document.getElementById('purRate').value = '';
+      persist();
+      renderProducts();
+      refreshAdminViews();
+      alert(`✅ ${prod.name} का स्टॉक बढ़कर ${prod.stockQty} हो गया!`);
+    }
+
+    function renderLedgerView() {
+      let totalBuy = 0, totalSell = 0, totalProfit = 0;
+      storeData.ledger.forEach(entry => {
+        if (entry.type === 'BUY') totalBuy += Number(entry.amount) || 0;
+        if (entry.type === 'SELL') {
+          totalSell += Number(entry.amount) || 0;
+          totalProfit += Number(entry.profit) || 0;
+        }
+      });
+      document.getElementById('statTotalBuy').innerText = '₹' + totalBuy;
+      document.getElementById('statTotalSell').innerText = '₹' + totalSell;
+      document.getElementById('statTotalProfit').innerText = '₹' + totalProfit;
+
+      const hist = document.getElementById('ledgerHistoryWrap');
+      if (!storeData.ledger.length) {
+        hist.innerHTML = '<p style="font-size:12px;color:#6b7280;">अभी तक कोई खरीद या बिक्री दर्ज नहीं हुई है।</p>';
+        return;
+      }
+      hist.innerHTML = storeData.ledger.map(l => `
+        <div class="admin-item-row" style="padding:8px 10px;">
+          <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:700;">
+            <span>${l.type === 'BUY' ? '🔴' : '🟢'} ${escHtml(l.title)}</span>
+            <span>${l.type === 'BUY' ? '-₹' + l.amount : '+₹' + l.amount}</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:10px;color:#6b7280;margin-top:3px;">
+            <span>${escHtml(l.date)}</span>
+            ${l.type === 'SELL' ? `<span style="color:#15803d;font-weight:700;">मुनाफा: ₹${l.profit}</span>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function saveAllAdmin(showMsg = true) {
+      storeData.delMode = document.getElementById('admDelMode').value;
+      storeData.delCharge = parseInt(document.getElementById('admDelCharge').value) || 0;
+      storeData.delMinOrder = parseInt(document.getElementById('admDelMinOrder').value) || 0;
+      storeData.offerText = document.getElementById('admOfferText').value;
+      storeData.couponCode = document.getElementById('admCouponCode').value.trim().toUpperCase();
+      storeData.couponPct = parseInt(document.getElementById('admCouponPct').value) || 0;
+
+      storeData.products.forEach((p, i) => {
+        if (document.getElementById(`adm_name_${i}`)) {
+          p.name = document.getElementById(`adm_name_${i}`).value.trim() || p.name;
+          p.unit = document.getElementById(`adm_unit_${i}`).value.trim() || p.unit;
+          p.emoji = document.getElementById(`adm_emoji_${i}`).value.trim() || p.emoji;
+          p.cat = document.getElementById(`adm_cat_${i}`).value;
+          p.typeLabel = document.getElementById(`adm_type_${i}`).value;
+          p.buyPrice = parseInt(document.getElementById(`adm_b_${i}`).value) || 0;
+          p.price = parseInt(document.getElementById(`adm_p_${i}`).value) || p.price;
+          p.mrp = parseInt(document.getElementById(`adm_m_${i}`).value) || p.price;
+          p.stockQty = parseInt(document.getElementById(`adm_q_${i}`).value) || 0;
+          p.stock = document.getElementById(`adm_s_${i}`).checked;
+        }
+      });
+
+      persist();
+      renderCategoryTabs();
+      updateStoreBanners();
+      renderProducts();
+      updateBill();
+      refreshAdminViews();
+      if (showMsg) alert('✅ सभी कस्टमाइजेशन, नाम, फोटो और रेट सेव हो गए!');
+    }
+
+    function exportHtmlFile() {
+      saveAllAdmin(false);
+      let docHtml = document.documentElement.outerHTML;
+      const dataStr = JSON.stringify(storeData);
+      docHtml = docHtml.replace(
+        /let storeData = null;[\s\S]*?if \(!storeData\.ledger\) storeData\.ledger = \[\];/,
+        `let storeData = ${dataStr};`
+      );
+      const blob = new Blob(['<!DOCTYPE html>\n' + docHtml], { type: 'text/html' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'index.html';
+      a.click();
+    }
+
+    renderCategoryTabs();
+    updateStoreBanners();
+    renderProducts();
+  </script>
+</body>
+</html>
