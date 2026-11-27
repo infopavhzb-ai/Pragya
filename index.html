@@ -284,7 +284,7 @@
           <span>🫙 अचार</span>
           <span>🌾 चावल</span>
         </div>
-        <div class="dcp-link-box">🔗 https://pragyafarm.netlify.app</div>
+        <div class="dcp-link-box">🔗 https://infopavhzb-ai.github.io/Pragya/</div>
       </div>
       <div class="share-actions-grid">
         <button type="button" class="btn-wa-card" onclick="shareCardOnWhatsApp()">📲 कार्ड + लिंक शेयर करें</button>
@@ -551,6 +551,8 @@
   </div>
 
   <script>
+    const STORE_URL = "https://infopavhzb-ai.github.io/Pragya/";
+
     /* Direct 1-Click PWA Install Logic */
     let deferredInstallPrompt = null;
 
@@ -643,11 +645,11 @@
 
       ctx.fillStyle = '#ffffff';
       ctx.beginPath();
-      ctx.roundRect(130, 375, 640, 62, 14);
+      ctx.roundRect(90, 375, 720, 62, 14);
       ctx.fill();
       ctx.fillStyle = '#14532d';
-      ctx.font = 'bold 25px sans-serif';
-      ctx.fillText('🛒 ऑनलाइन ऑर्डर करें: https://pragyafarm.netlify.app', 450, 415);
+      ctx.font = 'bold 22px sans-serif';
+      ctx.fillText('🛒 ऑनलाइन ऑर्डर: ' + STORE_URL, 450, 414);
 
       ctx.fillStyle = '#bbf7d0';
       ctx.font = '20px sans-serif';
@@ -665,7 +667,7 @@
     }
 
     async function shareCardOnWhatsApp() {
-      const shareText = `🌱 *प्रज्ञा भूमि प्राकृतिक फार्म* (मेरु, हजारीबाग)\nताज़ी रसायन-मुक्त देशी सब्जियां, साग, मसाले व चावल अब घर बैठे मंगाएं!\n\n🛒 *ऑनलाइन स्टोर लिंक:*\n👉 https://pragyafarm.netlify.app\n\n📲 *ऐप इंस्टॉल करने के लिए:* लिंक खोलकर ऊपर *"📲 ऐप इंस्टॉल करें"* बटन दबाएं!\n📞 संपर्क: +91 8210481088`;
+      const shareText = `🌱 *प्रज्ञा भूमि प्राकृतिक फार्म* (मेरु, हजारीबाग)\nताज़ी रसायन-मुक्त देशी सब्जियां, साग, मसाले व चावल अब घर बैठे मंगाएं!\n\n🛒 *ऑनलाइन स्टोर लिंक:*\n👉 ${STORE_URL}\n\n📲 *ऐप इंस्टॉल करने के लिए:* लिंक खोलकर ऊपर *"📲 ऐप इंस्टॉल करें"* बटन दबाएं!\n📞 संपर्क: +91 8210481088`;
       const c = generateCardCanvas();
       c.toBlob(async function(blob) {
         if (blob && navigator.share && navigator.canShare) {
@@ -686,11 +688,10 @@
     }
 
     function copyStoreLink() {
-      const url = 'https://pragyafarm.netlify.app';
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(url).then(() => alert('✅ स्टोर लिंक कॉपी हो गया!'));
+        navigator.clipboard.writeText(STORE_URL).then(() => alert('✅ स्टोर लिंक कॉपी हो गया!'));
       } else {
-        prompt('लिंक कॉपी करें:', url);
+        prompt('लिंक कॉपी करें:', STORE_URL);
       }
     }
 
@@ -726,7 +727,7 @@
     ];
 
     let storeData = null;
-    try { storeData = JSON.parse(localStorage.getItem('pb_dukaan_v11')); } catch (e) {}
+    try { storeData = JSON.parse(localStorage.getItem('pb_dukaan_v12')); } catch (e) {}
     if (!storeData || !Array.isArray(storeData.products)) {
       storeData = {
         offerText: "🎁 आज का ऑफर: ताज़ी देशी उपज सीधे खेत से | कूपन कोड: PRAGYA10 (10% छूट)",
@@ -760,7 +761,7 @@
 
     function persist() {
       try {
-        localStorage.setItem('pb_dukaan_v11', JSON.stringify(storeData));
+        localStorage.setItem('pb_dukaan_v12', JSON.stringify(storeData));
       } catch (e) {
         alert('⚠️ फोटो का साइज ज्यादा होने से स्टोरेज भर गया है। कृपया छोटी फोटो चुनें।');
       }
